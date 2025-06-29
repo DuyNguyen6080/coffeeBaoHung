@@ -40,26 +40,28 @@ const Navbar = forwardRef(({ className }, ref) => {
         </li>
       </ul>
       <ul className="icons">
-        <li>
-          <a href="#" className="icon brands fa-brands fa-twitter">
-            <span className="label">Twitter</span>
-          </a>
-        </li>
-        <li>
+         <li>
           <a href="https://www.facebook.com/profile.php?id=100090739546074" className="icon brands fa-brands fa-facebook-f">
             <span className="label">Facebook</span>
           </a>
         </li>
+
         <li>
-          <a href="#" className="icon brands fa-brands fa-instagram">
+          <a href="https://www.instagram.com/baohung.coffee?fbclid=IwY2xjawLNv85leHRuA2FlbQIxMABicmlkETFSWmpJNG9tS3RsWk1WcWhFAR5rOECLqla3N9xjCW8javu2pvdz99xlnuY3OTU6ngAMIVfv4_ldVNIVFiqRCg_aem_MFWtTbh7ZPLhkAlhjhoXbg" className="icon brands fa-brands fa-instagram">
             <span className="label">Instagram</span>
           </a>
         </li>
+        
+
         <li>
-          <a href="#" className="icon brands fa-brands fa-github">
-            <span className="label">GitHub</span>
+          <a href="https://x.com/BaoHung_Coffe?fbclid=IwY2xjawLNv_1leHRuA2FlbQIxMABicmlkETFSWmpJNG9tS3RsWk1WcWhFAR7rNoFWUcO-fQ2QyciAtxQZOEcbs_kXlrHw9_FQ-41OHbj4HwHc1LYm9gH9Xw_aem_xiBb-p8h1CqFRrhI9WgYwg" className="icon brands fa-brands fa-x-twitter">
+            <span className="label">Twitter</span>
           </a>
         </li>
+       
+        
+          
+        
       </ul>
     </nav>
     )
