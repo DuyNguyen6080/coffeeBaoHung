@@ -1,7 +1,37 @@
 body {
-  background: url('./assets/images/less-coffee.jpg') no-repeat center center fixed;
+  background: url('./assets/images/coffee-vertical-size.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: #1e252d; /* fallback color */
+}
+
+/* Mobile responsive background adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 150% auto;
+    background-position: center center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: 200% auto;
+    background-position: center -50px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  body {
+    background-size: 250% auto;
+    background-position: center -50px;
+    
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    background-size: 300% auto;
+    background-position: center -50px;
+  }
 }
 
 #root {
@@ -96,6 +126,7 @@ body {
 }
 .header-logo {
   animation: fade 1s cubic-bezier(.28,.67,.69,.96);
+  
   opacity: 1 !important;
 }
 @keyframes fade {
@@ -163,8 +194,17 @@ body {
   border: none;
 }
 
-@media (max-width: 100px) {
-  .map-container iframe {
-    height: 300px;
+
+@media screen and (max-width: 768px) {
+  #map-section {
+    margin-left: 5%;
+    margin-right: 5%;
   }
+  .map-title {
+    font-size: 1.5rem;
+  }
+  .map-container iframe {
+    height: 400px;
+  }
+  
 }
