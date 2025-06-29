@@ -3,14 +3,7 @@ body {
   background-size: 170%;
   background-color: #1e252d; /* fallback color */
 }
-@media screen and (max-width: 440px) {
-  body {
-    
-    background-size: 340%;
-    background-color: #1e252d; /* fallback color */
-  }
-  
-}
+
 
 /* Mobile responsive background adjustments */
 
