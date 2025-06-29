@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - route
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
+      - main
       - route
 
 jobs:
