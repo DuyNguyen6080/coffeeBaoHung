@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import './App.css'
-
+import Navbar from './Navbar';
+import Map from './Map';
 function Order() {
   const [introRef, introInView] = useInView({
     threshold: 0.1
@@ -14,9 +15,12 @@ function Order() {
   const [mainRef, mainInView] = useInView({
     threshold: 0.1
   });
+  const [mapRef, mapInView] = useInView({
+    threshold: 0.1,
+  });
 
   return (
-    <div id='wrapper' className="fade-in">
+    <div id='wrapper' >
       <div 
         id="intro"
         ref={introRef}
@@ -34,45 +38,10 @@ function Order() {
       </div>
 
       <br/>
-      <nav 
-        id="nav" 
-        ref={navRef} 
-        className={`fade-in-scroll ${navInView ? 'visible' : ''}`}
-      >
-        <ul className="links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li className='active'>
-            <Link to="/order">Order</Link>
-          </li>
-          <li>
-            <Link to="/product">Product</Link>
-          </li>
-        </ul>
-        <ul className="icons">
-          <li>
-            <a href="#" className="icon brands fa-brands fa-twitter">
-              <span className="label">Twitter</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon brands fa-brands fa-facebook-f">
-              <span className="label">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon brands fa-brands fa-instagram">
-              <span className="label">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon brands fa-brands fa-github">
-              <span className="label">GitHub</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar ref={navRef} 
+      className={`fade-in-scroll ${navInView ? 'visible' : ''}`}>
+        
+      </Navbar>
 
       <div 
         id="main" 
@@ -93,12 +62,13 @@ function Order() {
                 <Link to="/product" className="button">View Our Menu</Link>
               </li>
               <li>
-                <a href="tel:+1234567890" className="button">Call Us</a>
+                <a href="tel:+848885050249" className="button">Call Us</a>
               </li>
             </ul>
           </article>
         </section>
       </div>
+      <Map ref={mapRef} className={`fade-in-scroll ${mapInView ? "visible" : ""}`} />
     </div>
   )
 }
