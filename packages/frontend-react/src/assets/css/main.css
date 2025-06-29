@@ -3683,6 +3683,7 @@ input, select, textarea {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
+			position: relative;
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
@@ -3698,6 +3699,7 @@ input, select, textarea {
 			margin-bottom: 0;
 			padding-left: 0;
 			text-transform: uppercase;
+			transform: translateY(1px);
 		}
 
 			#nav ul.links li {
@@ -3714,6 +3716,7 @@ input, select, textarea {
 					font-size: 0.8rem;
 					outline: none;
 					padding: 0 2rem;
+					
 				}
 
 					#nav ul.links li a:hover {
