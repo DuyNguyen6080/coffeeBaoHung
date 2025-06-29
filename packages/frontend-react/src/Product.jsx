@@ -95,7 +95,7 @@ function Product () {
                     {products.map((product, index) => (
                         <div key={index} className="product-card">
                             <h3>{product.title}</h3>
-                            <img src={product.imgSrc} className="product_image" alt={product.title} />
+                            <img src={product.imgSrc} className="image fit" alt={product.title} />
                             <Link to="/order" className="button">Order Now</Link>
                         </div>
                     ))}
