@@ -1,6 +1,6 @@
 body {
   background: url('./assets/images/less-coffee.svg') no-repeat center center fixed;
-  background-size: 170%;
+  background-size: cover;
   background-color: #1e252d; /* fallback color */
 }
 
