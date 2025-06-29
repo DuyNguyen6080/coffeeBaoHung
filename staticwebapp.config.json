@@ -1,1 +1,8 @@
-{}
+{
+  "routes": [
+    {
+      "route": "/product",
+      "rewrite": "/indext.html"
+    }
+  ]
+}
