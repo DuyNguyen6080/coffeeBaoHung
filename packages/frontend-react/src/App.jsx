@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import Order from './Order'
 import coffeeImage from './assets/images/coffee.png'
@@ -31,9 +31,9 @@ function Home() {
       >
         <h1 className ="welcome">Welcome to</h1>
         <header id="header" className ="header-logo">
-          <a href="/" className="logo">
+          <Link to="/" className="logo">
             BAO HUNG COFFEE
-          </a>
+          </Link>
         </header>
         <p>
           A Family Business has been serving community for 25+ years
@@ -48,13 +48,13 @@ function Home() {
       >
         <ul className="links">
           <li className="active">
-            <a href="/  ">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/order">Order</a>
+            <Link to="/order">Order</Link>
           </li>
           <li>
-            <a href="/product">Product</a>
+            <Link to="/product">Product</Link>
           </li>
         </ul>
         <ul className="icons">
