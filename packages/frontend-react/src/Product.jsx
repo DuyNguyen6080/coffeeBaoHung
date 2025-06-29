@@ -3,6 +3,7 @@ import Product2 from './assets/images/product2.jpg'
 import Product3 from './assets/images/product3.jpg'
 import Product4 from './assets/images/product4.jpg'
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 import './App.css'
 function Product () {
     const [introRef, introInView] = useInView({
@@ -25,7 +26,7 @@ function Product () {
     ];
     
     return (
-        <div id='wrapper' className = "fade-in">
+    <div id='wrapper' className = "fade-in">
         <div 
           id="intro"
           ref={introRef}
@@ -33,14 +34,14 @@ function Product () {
         >
           <h1 className ="welcome">Products</h1>
           <header id="header" className ="header-logo">
-          <a href="/" className="logo">
+          <Link to="/" className="logo">
             BAO HUNG COFFEE
-          </a>
+          </Link>
           </header>
           <p>
         A Family Business has been serving community for 25+ years
       </p>
-        </div>
+    </div>
     
     
       <br/>
@@ -51,13 +52,13 @@ function Product () {
       >
       <ul className="links">
         <li>
-          <a href="/  ">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/order">Order</a>
+          <Link to="/order">Order</Link>
         </li>
         <li className='active'>
-          <a href="/product">Product</a>
+          <Link to="/product">Product</Link>
         </li>
       </ul>
       <ul className="icons">
@@ -95,7 +96,7 @@ function Product () {
                         <div key={index} className="product-card">
                             <h3>{product.title}</h3>
                             <img src={product.imgSrc} className="product_image" alt={product.title} />
-                            <button className="button">Order Now</button>
+                            <Link to="/order" className="button">Order Now</Link>
                         </div>
                     ))}
                 </section>
@@ -104,7 +105,7 @@ function Product () {
        
         
     
-  </div>
+    </div>
        
     )
 }
