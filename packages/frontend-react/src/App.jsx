@@ -4,7 +4,7 @@ import Order from './Order'
 import coffeeImage from './assets/images/coffee.png'
 import Product from './Product.jsx'
 import { useInView } from 'react-intersection-observer'
-
+import Navbar from './Navbar'
 function Home() {
   const [introRef, introInView] = useInView({
     threshold: 0.1
@@ -41,45 +41,7 @@ function Home() {
       </div>
 
       <br/>
-      <nav 
-        id="nav"
-        ref={navRef}
-        className={`fade-in-scroll ${navInView ? 'visible' : ''}`}
-      >
-        <ul className="links">
-          <li className="active">
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/order">Order</Link>
-          </li>
-          <li>
-            <Link to="/product">Product</Link>
-          </li>
-        </ul>
-        <ul className="icons">
-          <li>
-            <a href="#" className="icon brands fa-brands fa-twitter">
-              <span className="label">Twitter</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon brands fa-brands fa-facebook-f">
-              <span className="label">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon brands fa-brands fa-instagram">
-              <span className="label">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon brands fa-brands fa-github">
-              <span className="label">GitHub</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar></Navbar>
     
       <div 
         id="main"

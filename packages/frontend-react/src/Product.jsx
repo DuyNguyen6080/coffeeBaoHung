@@ -4,6 +4,7 @@ import Product3 from './assets/images/product3.jpg'
 import Product4 from './assets/images/product4.jpg'
 import { useInView } from 'react-intersection-observer'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
 import './App.css'
 function Product () {
     const [introRef, introInView] = useInView({
@@ -45,45 +46,7 @@ function Product () {
     
     
       <br/>
-      <nav 
-        id="nav" 
-        ref={navRef} 
-        className={`fade-in-scroll ${navInView ? 'visible' : ''}`}
-      >
-      <ul className="links">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/order">Order</Link>
-        </li>
-        <li className='active'>
-          <Link to="/product">Product</Link>
-        </li>
-      </ul>
-      <ul className="icons">
-        <li>
-          <a href="#" className="icon brands fa-brands fa-twitter">
-            <span className="label">Twitter</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" className="icon brands fa-brands fa-facebook-f">
-            <span className="label">Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" className="icon brands fa-brands fa-instagram">
-            <span className="label">Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" className="icon brands fa-brands fa-github">
-            <span className="label">GitHub</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+     <Navbar></Navbar>
     
 
 <div 
